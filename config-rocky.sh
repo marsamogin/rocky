@@ -15,7 +15,7 @@ echo "Instalar os pacotes que mais usamos:"
 sudo yum install rsync bind-utils mlocate wget openldap-clients make cmake automake man net-tools ntsysv nfs-utils bacula-client yum-utils postfix s-nail zip unzip telnet chrony git lynx lsof curl -y
 echo "Ir até a pasta "/tmp" e baixar os scripts usados por nos do Github:"
 sudo cd /tmp
-sudo git clone https://github.com/marsamogin/linux
+sudo git clone https://github.com/marsamogin/rocky
 echo "Criar pasta padrao /root/shell"
 sudo mkdir /root/shell
 echo "Copiar arquivos prontos de config. para destino"
