@@ -25,7 +25,7 @@ sudo mv -y main.cf /etc/postfix
 sudo mv -y monitor-disco.sh /root/shell
 echo "Definir nome do host no arquivo do Bacula"
 sudo sed -i 's/trocar-fd/$hostname-fd/g' /etc/bacula/bacula-fd.conf
-echo "Iniciar e ativar os servicos postfix e bacula da maquina
+echo "Iniciar e ativar os servicos postfix e bacula da maquina"
 sudo systemctl start postfix && sudo systemctl start bacula-fd
 echo "Ajustar a configuracao do sshd_config"
 sudo sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
