@@ -21,3 +21,4 @@ echo "Configurar acesso usuario danfeijo"
 echo "Copiar as chaves privadas para a maquina Linux auxiliar"
 scp *@$hostname marcio@143.106.108.5:/tmp
 rm -rf *@$hostname
+/root/shell/./config-rocky.sh
