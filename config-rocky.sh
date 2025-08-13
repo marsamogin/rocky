@@ -25,7 +25,8 @@ chmod +x /root/shell/monitor-disco.sh
 echo "Definir nome do host no arquivo do Bacula"
 sed -i 's/trocar-fd/$hostname-fd/g' /etc/bacula/bacula-fd.conf
 echo "Iniciar e ativar os servicos postfix e bacula da maquina"
-systemctl start postfix && systemctl start bacula-fd
+systemctl enable postfix && systemctl start postfix
+systemctl enable bacula-fd && systemctl start bacula-fd
 echo "Ajustar a configuracao do sshd_config"
 sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
