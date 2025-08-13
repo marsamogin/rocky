@@ -1,6 +1,6 @@
 #!/bin/bash
 # Capturar o nome da maquina
-hostname=`hostname`
+hostname=$(hostname)
 ##########################################
 ##########################################
 echo "Configurar acesso usuario ludgero"
