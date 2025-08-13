@@ -1,6 +1,4 @@
 #!/bin/bash
-# Capturar o nome da maquina
-hostname=$(hostname)
 ##########################################
 ##########################################
 echo "Configurar acesso usuario ludgero"
@@ -18,6 +16,8 @@ echo "Configurar acesso usuario otoniel"
 echo "Configurar acesso usuario danfeijo"
 /root/shell/./create-user-rocky-danfeijo.sh
 ##########################################
+# Capturar o nome da maquina
+hostname=$(hostname)
 echo "Copiar as chaves privadas para a maquina Linux auxiliar"
 scp *@$hostname marcio@143.106.108.5:/tmp
 rm -rf *@$hostname
