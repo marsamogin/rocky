@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Obtem o nome do host"
-hostname = `hostname`
+hostname=$(hostname)
 echo "Desativar o Selinux e o Firewall:"
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config && systemctl disable firewalld
 echo "Instalar o repositório REMI:"
