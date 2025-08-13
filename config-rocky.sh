@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "Obtem o nome do host"
-hostname=$(hostname)
 echo "Desativar o Selinux e o Firewall:"
 sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config && systemctl disable firewalld
 echo "Instalar o repositório REMI:"
@@ -22,6 +20,8 @@ mv -f /tmp/linux/bacula-fd.conf /etc/bacula
 mv -f /tmp/linux/main.cf /etc/postfix
 mv -f /tmp/linux/monitor-disco.sh /root/shell
 chmod +x /root/shell/monitor-disco.sh
+echo "Obtem o nome do host"
+hostname=$(hostname)
 echo "Definir nome do host no arquivo do Bacula"
 sed -i 's/trocar-fd/$hostname-fd/g' /etc/bacula/bacula-fd.conf
 echo "Iniciar e ativar os servicos postfix e bacula da maquina"
