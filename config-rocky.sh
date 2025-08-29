@@ -19,7 +19,7 @@ mv -f /tmp/linux/chrony.conf /etc
 mv -f /tmp/linux/bacula-fd.conf /etc/bacula
 mv -f /tmp/linux/main.cf /etc/postfix
 mv -f /tmp/linux/*.sh /root/shell
-chmod +x /root/shell/monitor-disco.sh
+chmod +x /root/shell/*.sh
 echo "Definir nome do host no arquivo do Bacula"
 sed -i "s/trocar/$(hostname)/g" /etc/bacula/bacula-fd.conf
 echo "Iniciar e ativar os servicos postfix e bacula da maquina"
@@ -30,4 +30,4 @@ sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_co
 sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
 echo "Trocar a senha de root"
 passwd
-echo "Ultima coisa: lembrar de editar a crontab"
+echo "Ultima coisa: lembrar de copiar o conteudo do arq. crontab no /tmp"
