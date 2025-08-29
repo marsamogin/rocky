@@ -18,7 +18,7 @@ echo "Copiar arquivos prontos de config. para destino"
 mv -f /tmp/linux/chrony.conf /etc
 mv -f /tmp/linux/bacula-fd.conf /etc/bacula
 mv -f /tmp/linux/main.cf /etc/postfix
-mv -f /tmp/linux/monitor-disco.sh /root/shell
+mv -f /tmp/linux/*.sh /root/shell
 chmod +x /root/shell/monitor-disco.sh
 echo "Definir nome do host no arquivo do Bacula"
 sed -i "s/trocar/$(hostname)/g" /etc/bacula/bacula-fd.conf
