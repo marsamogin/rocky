@@ -1,8 +1,8 @@
 #!/bin/bash
 ##########################################
 ##########################################
-echo "Configurar acesso usuario ludgero"
-/root/shell/./create-user-rocky-ludgero.sh
+#echo "Configurar acesso usuario ludgero"
+#/root/shell/./create-user-rocky-ludgero.sh
 ##########################################
 echo "Configurar acesso usuario marcio"
 /root/shell/./create-user-rocky-marcio.sh
@@ -10,8 +10,8 @@ echo "Configurar acesso usuario marcio"
 echo "Configurar acesso usuario keite"
 /root/shell/./create-user-rocky-keite.sh
 ##########################################
-echo "Configurar acesso usuario otoniel"
-/root/shell/./create-user-rocky-otoniel.sh
+#echo "Configurar acesso usuario otoniel"
+#/root/shell/./create-user-rocky-otoniel.sh
 ##########################################
 echo "Configurar acesso usuario danfeijo"
 /root/shell/./create-user-rocky-danfeijo.sh
