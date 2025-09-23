@@ -20,8 +20,9 @@ mv -f /tmp/linux/bacula-fd.conf /etc/bacula
 mv -f /tmp/linux/main.cf /etc/postfix
 mv -f /tmp/linux/*.sh /root/shell
 chmod +x /root/shell/*.sh
-echo "Definir nome do host no arquivo do Bacula"
+echo "Definir nome do host no arquivo do Bacula e do Postfix"
 sed -i "s/trocar/$(hostname)/g" /etc/bacula/bacula-fd.conf
+sed -i "s/trocar/$(hostname)/g" /etc/postfix/main.cf
 echo "Habilitar os servicos postfix e bacula da maquina"
 systemctl enable postfix && systemctl enable bacula-fd
 echo "Ajustar a configuracao do sshd_config"
