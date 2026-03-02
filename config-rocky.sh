@@ -10,7 +10,7 @@ sudo dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.
 echo "Atualizar os repositórios e pacotes:"
 sudo yum update -y
 echo "Instalar os pacotes que mais usamos:"
-sudo yum install rsync bind-utils mlocate wget openldap-clients make cmake automake man net-tools ntsysv nfs-utils bacula-client yum-utils postfix s-nail zip unzip telnet chrony git lynx lsof curl -y
+sudo yum install rsync bind-utils mlocate wget openldap-clients make cmake automake man net-tools ntsysv nfs-utils yum-utils postfix s-nail zip unzip telnet chrony git lynx lsof curl -y
 echo "Ir até a pasta "/tmp" e baixar os scripts usados por nos do Github:"
 cd /tmp
 git clone https://github.com/marsamogin/linux
