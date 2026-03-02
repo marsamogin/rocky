@@ -17,7 +17,7 @@ git clone https://github.com/marsamogin/linux
 echo "Copiar arquivos prontos de config. para destino"
 mv -f /tmp/linux/chrony.conf /etc
 mv -f /tmp/linux/bacula-fd.conf /etc/bacula
-mv -f /tmp/linux/main.cf /etc/postfix
+mv -f /tmp/linux/main.cf-rocky /etc/postfix/main.cf
 mv -f /tmp/linux/*.sh /root/shell
 chmod +x /root/shell/*.sh
 echo "Definir nome do host no arquivo do Bacula e do Postfix"
