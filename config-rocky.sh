@@ -26,6 +26,5 @@ systemctl enable postfix
 echo "Ajustar a configuracao do sshd_config"
 sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
 sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
-echo "Trocar a senha de root"
-passwd
-echo "Ultima coisa: lembrar de copiar o conteudo do arq. crontab no /tmp"
+echo "Lembrar de copiar o conteudo do arq. crontab no /tmp"
+echo "Trocar a senha de root apos o reboot
