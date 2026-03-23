@@ -16,15 +16,13 @@ cd /tmp
 git clone https://github.com/marsamogin/linux
 echo "Copiar arquivos prontos de config. para destino"
 mv -f /tmp/linux/chrony.conf /etc
-mv -f /tmp/linux/bacula-fd.conf /etc/bacula
 mv -f /tmp/linux/main.cf-rocky /etc/postfix/main.cf
 mv -f /tmp/linux/*.sh /root/shell
 chmod +x /root/shell/*.sh
 echo "Definir nome do host no arquivo do Bacula e do Postfix"
-sed -i "s/trocar/$(hostname)/g" /etc/bacula/bacula-fd.conf
 sed -i "s/trocar/$(hostname)/g" /etc/postfix/main.cf
-echo "Habilitar os servicos postfix e bacula da maquina"
-systemctl enable postfix && systemctl enable bacula-fd
+echo "Habilitar os servicos postfix"
+systemctl enable postfix 
 echo "Ajustar a configuracao do sshd_config"
 sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
 sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
