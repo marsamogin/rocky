@@ -2,23 +2,23 @@
 ##########################################
 ##########################################
 #echo "Configurar acesso usuario ludgero"
-#/root/shell/./create-user-rocky-ludgero.sh
+#/root/shell/rocky/./create-user-rocky-ludgero.sh
 ##########################################
 echo "Configurar acesso usuario marcio"
-/root/shell/./create-user-rocky-marcio.sh
+/root/shell/rocky/./create-user-rocky-marcio.sh
 ##########################################
 echo "Configurar acesso usuario keite"
-/root/shell/./create-user-rocky-keite.sh
+/root/shell/rocky/./create-user-rocky-keite.sh
 ##########################################
 #echo "Configurar acesso usuario otoniel"
-#/root/shell/./create-user-rocky-otoniel.sh
+#/root/shell/rocky/./create-user-rocky-otoniel.sh
 ##########################################
 echo "Configurar acesso usuario danfeijo"
-/root/shell/./create-user-rocky-danfeijo.sh
+/root/shell/rocky/./create-user-rocky-danfeijo.sh
 ##########################################
 # Capturar o nome da maquina
 hostname=$(hostname)
 echo "Copiar as chaves privadas para a maquina Linux auxiliar"
-scp *@$hostname marcio@143.106.108.5:/tmp
+scp *@$hostname marcio@143.106.190.136:/home/marcio/temp
 rm -rf *@$hostname
-/root/shell/./config-rocky.sh
+/root/shell/rocky/./config-rocky.sh
