@@ -7,7 +7,7 @@ yum install git -y
 mkdir /root/shell && cd /root/shell
 # Baixar shell do Github
 git clone https://github.com/marsamogin/rocky
-# Mover arquivos para diretorio shell
-cd /root/shell/rocky/
 # Adicionar permissao de execuçao aos aqruivos
-chmod +x *.sh
+chmod +x /root/shell/rocky/*.sh
+# Chama script de criacao de usuarios
+/root/shell/rocky/./create-users-rocky.sh
