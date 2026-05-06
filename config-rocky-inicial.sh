@@ -8,8 +8,6 @@ mkdir /root/shell && cd /root/shell
 # Baixar shell do Github
 git clone https://github.com/marsamogin/rocky
 # Mover arquivos para diretorio shell
-mv /root/shell/rocky/*.sh .
+cd /root/shell/rocky/
 # Adicionar permissao de execuçao aos aqruivos
 chmod +x *.sh
-# Remove diretorio baixado
-rm -rf /root/shell/rocky
